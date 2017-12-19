@@ -17,8 +17,16 @@ defmodule TwitterSimulator.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/user/:id", UserController, :show
-    get "/user", UserController, :something
+    get "/user/login_user", UserController, :login_user
+    get "/user/register_user", UserController, :register_user
+    get "/user/get_all_tweets", UserController, :get_all_tweets
+    get "/user/tweet", UserController, :tweet
+    get "/user/subscribe_to_user", UserController, :subscribe_to_user
+    get "/user/get_tweets_by_hashtag", UserController, :get_tweets_by_hashtag
+    get "/user/get_tweets_by_handle", UserController, :get_tweets_by_handle
+    get "/user/get_all_subscribers_tweets", UserController, :get_all_subscribers_tweets
+    get "/user/get_all_following", UserController, :get_all_following
+    get "/user/get_all_followers", UserController, :get_all_followers
   end
 
 
